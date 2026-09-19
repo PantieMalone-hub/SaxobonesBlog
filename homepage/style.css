@@ -1,0 +1,354 @@
+body {
+    margin: 15px;
+    background-color: #000;
+    cursor: url(../cursor/normal.cur), auto;
+}
+.mainp{
+    max-height: 390px;  /* Altura máxima da lista */
+  overflow-y: auto;   /* Ativa a rolagem vertical se passar de 150px */
+  overflow-x: hidden;  /* Evita barra de rolagem horizontal indesejada */
+}
+.barra-rolagem::-webkit-scrollbar{
+  width: 8px; /* Espessura da barra */
+}
+
+/* 3. Estiliza o fundo por onde a barra corre (Pista) */
+.barra-rolagem::-webkit-scrollbar-track {
+  background: #f0f0f0; 
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* 4. Estiliza o cursor que se move (Arraste) */
+.barra-rolagem::-webkit-scrollbar-thumb {
+  background: #007bff; /* Cor azul (mude para a cor do seu site) */
+  border-radius: 10px;   /* Cantos arredondados */
+}
+
+/* 5. Efeito visual quando o usuário passa o mouse na barra */
+.barra-rolagem::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Azul mais escuro no hover */
+}
+body a,
+a:hover, 
+button, 
+input[type="submit"], 
+input[type="button"], 
+select, 
+summary, 
+[onclick], 
+[role="button"],
+.clickable,
+href,
+link  {
+    cursor: url(../cursor/link.cur), auto;
+}
+.maiorplus {
+    display: flex;
+    flex-direction: column;
+}
+
+.maior {
+    background-image: linear-gradient(to bottom, #0e103d, #0d0630);
+    width: 45%;
+    border-radius: 20px;
+    padding: 2px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bnav {
+    list-style: none;
+    display: flex;
+    gap: 0.5px;
+    padding: 0;
+    margin: 5px;
+}
+
+.bnav a {
+    display: block;
+    padding: 5px 0;
+    margin: 3px;
+    color: #c5d0ff;
+    background-color: #081e61;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 10vw;
+    height: 2vh;
+    font-size: 16px;
+
+    box-shadow:
+        inset 0 12px 10px -5px #0d3768,
+        inset 0 -10px 10px -10px #051031;
+
+    /* Faz a sombra do botão */
+    transition: all 0.1s ease;
+}
+
+.bnav a:hover {
+    background-color: #071a50;
+
+    box-shadow:
+        inset 0 12px 10px -5px #09284b,
+        inset 0 -10px 10px -10px #030b20;
+
+    color: #98a6e4;
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+.divna h1{
+    font-family: 'Heating Elegant', sans-serif;                            
+    letter-spacing:2px;
+    font-size: xx-large;
+}
+.divn {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin:5px;
+    background-color:#1664bd;
+}
+.mainp{
+    background-image: linear-gradient(to bottom, #093d77, rgb(5, 30, 138));
+    border-radius:10px;
+    margin:6px;
+    margin-left:3px;
+    box-shadow:inset 1px 1px 150px #0e1566;
+    padding:3px;
+    border: rgb(0, 4, 19),ridge;
+    flex-direction:column;
+}
+.content{
+    display:flex;
+    margin-top:2px;
+
+    
+}
+.barra-lateral{
+    flex-direction:column;
+    width:20%;
+    background-color:#093d77;
+    margin:5px;
+    border-radius:3px;
+    background-size: contain;
+
+}
+.barra-lateral a{
+        display: block;
+    padding: 5px 0;
+    margin: 3px;
+    color: #c5d0ff;
+    background-color: #081e61;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    width: 5vw;
+    height: 2vh;
+    font-size: 16px;
+
+    box-shadow:
+        inset 0 12px 10px -5px #0d3768,
+        inset 0 -10px 10px -10px #051031;
+
+    /* Faz a sombra do botão */
+    transition: all 0.1s ease;
+}
+.barra-lateral a:hover{
+        background-color: #071a50;
+
+    box-shadow:
+        inset 0 12px 10px -5px #09284b,
+        inset 0 -10px 10px -10px #030b20;
+
+    color: #98a6e4;
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+.logs{
+    display:flex;
+    flex-direction:row;
+}
+.barra-rolagem{
+      max-height: 60px;  /* Altura máxima da lista */
+  overflow-y: auto;   /* Ativa a rolagem vertical se passar de 150px */
+  overflow-x: hidden;  /* Evita barra de rolagem horizontal indesejada */
+}
+    /* 2. Define a largura da barra de rolagem */
+.barra-rolagem::-webkit-scrollbar{
+  width: 8px; /* Espessura da barra */
+}
+
+/* 3. Estiliza o fundo por onde a barra corre (Pista) */
+.barra-rolagem::-webkit-scrollbar-track {
+  background: #f0f0f0; 
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* 4. Estiliza o cursor que se move (Arraste) */
+.barra-rolagem::-webkit-scrollbar-thumb {
+  background: #007bff; /* Cor azul (mude para a cor do seu site) */
+  border-radius: 10px;   /* Cantos arredondados */
+}
+
+/* 5. Efeito visual quando o usuário passa o mouse na barra */
+.barra-rolagem::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Azul mais escuro no hover */
+}
+
+.devlogs{
+    background:url(../imgs/azul2.jpeg);
+    background-size:cover;
+    margin:2px;
+    padding:4px;
+}
+.devlogs h2{
+    display: block;
+    padding: 5px 0;
+    margin: 3px;
+    color: #081e61;
+    background-color: #71a9dd;
+    text-align: center;
+    align-items:center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    width: 5vw;
+    height: 2vh;
+    font-size: 16px;
+    box-shadow:
+        inset 0 12px 10px -5px #3a6ea8,
+        inset 0 -10px 10px -10px #284499;
+
+    /* Faz a sombra do botão */
+    transition: all 0.1s ease;
+    background-size:cover;
+}
+.todo h2{
+        display: block;
+    padding: 5px 0;
+    margin: 3px;
+    color: #081e61;
+    background-color: #71a9dd;
+    text-align: center;
+    align-items:center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    width: 5vw;
+    height: 2vh;
+    font-size: 16px;
+    box-shadow:
+        inset 0 12px 10px -5px #3a6ea8,
+        inset 0 -10px 10px -10px #284499;
+
+    /* Faz a sombra do botão */
+    transition: all 0.1s ease;
+    background-size:cover;
+}
+.todo{
+    background:url(../imgs/azul.jpeg);
+    background-size:cover;
+    margin:2px;
+    padding:4px;
+}
+.krisimg{
+    background:url(../imgs/azul2.jpeg);
+    background-size:cover;
+    margin:2px;
+    padding:40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.part2{
+    display:flex;
+    flex-direction:row;
+    background-color: #f4f2f4;
+    padding:4px;
+    margin:2px;
+}
+.guestbook{
+        position: relative;
+    color: #ffffff;
+    background-image: url("../imgs/bigshot.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    background-color: black;
+    font-family: 'deltarune', sans-serif;
+    border-radius: 4px;
+    width: 500px;
+    height: 120px;
+    margin: 4px;
+
+    overflow: hidden;
+
+}
+.guestbook p{
+    margin-top:60px;
+    margin-left:17px;
+    color:#eaeaf0;
+    font-size:11.2px;
+    font-weight:100;
+}
+.guestbook a{
+    text-decoration:none;
+    color:#f0f0f3;
+    font-family: 'deltarune', sans-serif;
+    width:10px;
+    
+}
+.guestbook a:hover{
+    width:15px;
+    color:#b1b1c0;
+}
+@font-face {
+    font-family: "deltarune";
+    src: url("../fonts/greater-determination-sb.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+.blinkies{
+    margin:4px;
+}
+.chat {
+    border-radius: 12px;
+    padding: 16px;
+    margin: 5px auto;
+}
+iframe[src*="iframe.chat"], #chattable, .chattable-container {
+    width: 250px !important;   /* Altere para a largura desejada (Ex: 450px ou 25%) */
+    height: 350px !important;  /* Altere para a altura desejada (Ex: 600px ou 80vh) */
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+.button-link{
+    display:flex;
+    margin:5px;
+    padding:4px;
+    background-color: #0e103d;
+    border-radius:10px;
+    font-family:  monospace, sans-serif;
+    color: white;
+}
+.button-link p img{
+    width:90%;
+
+}
+.gif-fundo {
+    top: 0;
+    right: 0;
+
+    width: 55vw;
+    height: 100vh;
+
+    background-image:url(https://images.steamusercontent.com/ugc/16771014962801336302/535A5D38ED99FBA1B4164955A1919D90036146AE/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
+    z-index: -1;
+}

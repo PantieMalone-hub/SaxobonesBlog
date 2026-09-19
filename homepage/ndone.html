@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:black;
+            color:rgb(55, 101, 170);
+            text-align:center;
+        }
+    </style>
+    <title>Oh no!</title>
+</head>
+<body>
+    <section>
+
+        <h1>Oh no!</h1>
+        <p>It seems that you are trying to access this option.Unfortunately, this section is under construction!</p>
+        <p>Click in the Ant Tenna to go back to HOME
+        </p>
+        <a href="index.html"><img src="tenna/spr_tenna_dance_cabbage_big.gif" width="200px" alt="img rotativa" id="ANTtenna"></a>
+        <p>Thank you for your understanding.</p>
+
+        <img src="https://giffiles.alphacoders.com/158/158674.gif">
+    </section>
+</body>
+<script>
+    // 1. Lista com as URLs das imagens que você quer exibir
+  const imagens = [
+    "tenna/spr_tenna_dance_cabbage_big.gif",
+    "tenna/spr_tenna_dance_cane_big.gif",
+    "tenna/spr_tenna_kick_big.gif"
+  ];
+
+    let indiceAtual = 0;
+  const elementoImagem = document.getElementById("ANTtenna");
+
+  // 2. Função que troca a imagem
+  function trocarImagem() {
+    // Avança para o próximo índice (e volta para o 0 quando chega no fim)
+    indiceAtual = (indiceAtual + 1) % imagens.length;
+    
+    // Altera o atributo src da imagem
+    elementoImagem.src = imagens[indiceAtual];
+  }
+
+  // 3. Executa a função a cada 3000 milissegundos (3 segundos)
+  setInterval(trocarImagem, 3000);
+
+</script>
+</html>
