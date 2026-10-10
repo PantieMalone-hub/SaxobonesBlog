@@ -1,0 +1,787 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+.content{
+    margin-left:20px;
+    margin-right:20px;
+}
+/* Esconde a barra de rolagem no Chrome, Safari, Edge e Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Esconde a barra de rolagem no Firefox e IE/Edge antigo */
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+}
+
+
+
+/* 
+<span class="wiki-link">
+                             Fatec AMS
+                         <span class="tooltip">
+                            <strong>Fatec AMS</strong> — The Centro Paula Souza AMS program
+                             (Articulation of Secondary and Higher Vocational Education) is
+                              an educational pathway that integrates high school, the technical
+                              course (Etec), and the technology college (Fatec) over a total
+                              of five years.
+                         </span>
+                         </span>
+*/
+        .wiki-link {
+            color: #0645ad;
+            text-decoration: none;
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #0645ad;
+        }
+        .wiki-link .tooltip {
+            visibility: hidden;
+            width: 250px;
+            background-color: white;
+            color: #202122;
+            text-align: left;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            padding: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .wiki-link:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        .mainbody {
+    background-color: rgb(6, 52, 138);
+    border-radius: 20px;
+    width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+        .mainpart {
+    display: flex;
+    gap: 10px;
+    flex-direction:column;
+}
+        .content {
+    padding: 10px;
+}
+        .banner {
+            background-image: url(https://i.pinimg.com/originals/24/53/59/245359a37cb05aad0e263eb40368cc01.gif);
+            background-size: 800px, 100px;
+            background-repeat: no-repeat;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 0px;
+        }
+
+
+        /* About me */
+
+.me{
+    color:#f7fbff;
+    margin:8px;
+    padding:15px;
+}
+
+        .aboutme {
+            background-image: url(https://media1.tenor.com/m/Cw-JpL3tt6QAAAAd/ocean-beach.gif);
+    background-color: #5e89ca;
+    border-radius: 5px;
+    padding: 6px;
+
+    width: 220px;
+    min-width: 220px;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+.aboutme p{
+    background-color:rgba(10, 39, 112, 0.397);
+    border-radius: 6px;
+}
+
+/* fandoms */
+        .fandoms {
+    background-color: #221880;
+    border-radius: 5px;
+
+    display: flex;
+    gap: 6px;
+
+    flex: 1;
+    padding: 0 2px;
+
+    box-sizing: border-box;
+}
+        .in,
+.wli {
+    background-color: #050774;
+    border-radius: 4px;
+
+    margin: 6px;
+    padding: 10px;
+
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+}
+.in{
+    background-image: url(https://i.pinimg.com/originals/5b/6e/eb/5b6eeb4365ad1132e5ed5175a17bf6d6.gif);
+}
+.wli{
+    background-image: url(https://i.pinimg.com/originals/24/b0/7e/24b07e5d50c4c02833e1eb78a1e55f4b.gif);
+    background-repeat: no-repeat;
+    
+    background-size:cover;
+}
+        .barra-rolagem {
+    max-height: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra-rolagem::-webkit-scrollbar {
+    width: 8px;
+}
+
+.barra-rolagem::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.barra-rolagem::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+/* parte 2 */
+        .two-mainpart {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* likes e dislikes */
+        .likes,
+.dislikes {
+    background-image: url(https://i.pinimg.com/originals/1c/7a/d9/1c7ad9bc3bb97ebbf58a2fd85dcc3ee2.gif);
+
+    padding: 10px;
+    margin: 0;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    width: 100%;
+}
+.dislikes{
+    background-image: url(https://i.pinimg.com/originals/34/af/b2/34afb2918c2ca3fe7c8c64dbce606a2d.gif);
+}
+
+        .likes li,
+.dislikes li,
+.likes h1,
+.dislikes h1 {
+    background-color: rgba(255, 255, 255, 0.596);
+
+    margin: 4px;
+    padding: 4px 8px;
+
+    border-radius: 4px;
+
+    width: fit-content;
+
+    list-style: none;
+}
+        .likes h1,
+.dislikes h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+        .barra-likes {
+    max-height: 100px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra-likes::-webkit-scrollbar {
+    width: 8px;
+}
+
+.barra-likes::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.barra-likes::-webkit-scrollbar-thumb {
+    background: #0a81b1;
+    border-radius: 10px;
+}
+
+
+.segunda{
+    display:flex;
+    gap:10px;
+
+    background-color: #0048a7;
+}
+.languages{
+    padding: 0px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin:6px;
+    background-color: #dbe6f5;
+}
+.languages ul{
+    margin-left: 0px;
+}
+.languages li{
+    list-style: none;
+    max-width:cover;
+    justify-content: left;
+    margin-bottom:12px;
+}
+.languages b{
+    padding: 4px;
+    box-sizing: border-box;
+    margin:6px;
+    background-color: #3883ec;
+}
+
+
+
+        .favs,
+.kinnies {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    width: 100%;
+
+    background-color: #507eb9;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+}
+        .favs .kinnies {
+            background-image: url(https://pinimg.com);
+            background-repeat: no-repeat;
+        }
+        .third-mainpart {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    background-color: #221880;
+
+    border-radius: 6px;
+
+    padding: 15px;
+}
+        .char-container {
+    position: relative;
+
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid #0b0e96;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border-radius: 12px;
+
+    margin: 0;
+}
+
+.char-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: filter 0.5s ease;
+}
+        .char-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 26, 255, 0.6);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    padding: 4px;
+
+    box-sizing: border-box;
+}
+
+.char-container:hover .char-overlay {
+    opacity: 0.8;
+}
+
+.char-container:hover .char-img {
+    filter: blur(2px);
+}
+
+        .char-name {
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    font-family: 'VT323', monospace;
+
+    line-height: 1.1;
+}
+
+.char-work {
+    color: #ffcccc;
+
+    font-size: 0.85rem;
+
+    font-family: 'Share Tech Mono', monospace;
+
+    line-height: 1.1;
+}
+
+.char-name-link {
+    color: #fff;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.char-name-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.barra-rolagem2 {
+    max-height: 160px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-color: #507eb9;
+
+    border-radius: 6px;
+}
+        .barra-rolagem2::-webkit-scrollbar {
+    width: 8px;
+}
+
+.barra-rolagem2::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.barra-rolagem2::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+
+
+.barra-rolagem3 {
+    max-height: 230px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-radius: 6px;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+}
+.barra-rolagem3::-webkit-scrollbar {
+    /* Esconde a barra de rolagem no Chrome, Safari, Edge e Opera */
+    display: none;
+
+
+}
+
+.outrodiv{
+    flex-direction: column;
+    max-width: 600px;
+}
+.con{
+    display:flex;
+}
+.barra-lateral{
+    flex-direction:column;
+    width:20%;
+    height:cover;
+    background-color:#093d77;
+    margin:5px;
+    border-radius:3px;
+    background-size: contain;
+    position: -webkit-sticky; /* Suporte para Safari antigo */
+            position: sticky;
+            top: 20px; /* Distância do topo da tela quando grudar */
+
+}
+.barra-lateral a {
+    display: block;
+    padding: 5px 0;
+    margin: 3px;
+    color: #c5d0ff;
+    background-color: #081e61;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    
+    /* MODIFICADO: De vw/vh para px fixos */
+    width: 80px;   /* Ajuste conforme o espaço da sua barra lateral */
+    height: 20px;  /* Ajuste conforme necessário */
+    
+    font-size: 16px;
+    box-shadow:
+        inset 0 12px 10px -5px #0d3768,
+        inset 0 -10px 10px -10px #051031;
+    transition: all 0.1s ease;
+}
+.barra-lateral a:hover{
+        background-color: #071a50;
+
+    box-shadow:
+        inset 0 12px 10px -5px #09284b,
+        inset 0 -10px 10px -10px #030b20;
+
+    color: #98a6e4;
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.pfpmine{
+    margin-left:8px;
+    border-radius:12px;
+}
+.webmaster{
+    max-width: 600px;
+}
+.webm{
+    display:flex;
+    max-width: 600px;
+}
+
+.me{
+    margin:0px;
+}
+
+
+
+.marquee {
+    width: 600px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.marquee-content span {
+    flex-shrink: 0;
+    margin: 4px;
+}
+
+.marquee-content img {
+    display: block;
+    height: 31px;
+    width: auto;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* 
+.marquee {
+  height: 25px;
+  width: 420px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+} */
+
+/*IDEIA,fazer o about me ser um pc,o home é uma estante com pc e essas coisas*/
+
+
+
+
+/* ========================================================= ABAS - TAB SYSTEM ========================================================= */ 
+
+/* .webm é o container que contém: - os botões das abas - o conteúdo das abas */ 
+.webm {
+     display: flex; 
+     flex-direction: column; } 
+/* Container dos botões. Os botões ficam lado a lado. */ 
+.tab-buttons { 
+    display: flex; 
+    gap: 5px; 
+    margin-bottom: 0px; 
+} 
+
+
+/* Aparência básica dos botões. */ 
+.tab-button { 
+    padding: 8px 12px; 
+    border: none; 
+    border-radius: 0px; 
+    background-color: #081e61; 
+    color: #c5d0ff; 
+    cursor: pointer; 
+    font-size: 14px; 
+} 
+
+
+/* :hover significa: "quando o mouse estiver em cima do elemento". */ 
+.tab-button:hover { 
+    background-color: #071a50; 
+} 
+
+
+/* .active representa o botão que está selecionado. */ 
+.tab-button.active { 
+    background-color: #031833; 
+    color: white; 
+} 
+
+/* ESTA É A PARTE MAIS IMPORTANTE. Todas as abas começam escondidas. */ 
+.tab-content { 
+    display: none; 
+} 
+
+/* Somente a aba que possui "active" fica visível. */ 
+.tab-content.active { display: flex;
+     gap: 10px; 
+     width: 100%;
+      box-sizing: border-box;
+      background-color: #031833;
+}
+
+
+ /* Área do texto da primeira aba. */ 
+ .me {
+     flex: 1; 
+    } 
+
+
+ /* Área da foto. */ 
+ .pfpmine { 
+    flex-shrink: 0; 
+} 
+
+ /* Garante que a imagem não ultrapasse o tamanho disponível. */ 
+ .pfpmine img { 
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+} 
+
+
+ /* ==============================================CORREÇÃO DOS CARDS DE PERSONAGENS========================================= */
+
+
+/* .favs e .kinnies são dois containers diferentes.Ambos recebem: -display flex- os cards ficam lado a lado- quando não houver espaço, passam para a linha seguinte */ 
+.favs, .kinnies { 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+    width: 100%; 
+    background-color: #507eb9; 
+    border-radius: 6px; 
+    padding: 8px; 
+    box-sizing: border-box; 
+} 
+
+
+/* Cada personagem ocupa um espaço de 70x70px. */ 
+.char-container { 
+    position: relative; 
+    width: 70px; 
+    height: 70px; 
+    border: 1px solid #0b0e96;
+    overflow: hidden; 
+    background: #000; 
+    border-radius: 12px; 
+    margin: 0; 
+} 
+
+
+/* A imagem ocupa todo o card. */ 
+.char-img { 
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    transition: filter 0.5s ease;
+ } 
+
+
+/* Overlay = camada que aparece por cima da imagem. */ 
+.char-overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 26, 255, 0.6); 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center;    
+
+     /* Começa invisível. */ 
+
+     opacity: 0; 
+     transition: opacity 0.3s ease; 
+     padding: 4px; 
+     box-sizing: border-box; 
+    } 
+
+/* Quando o mouse passa sobre o card, o overlay aparece. */
+.char-container:hover .char-overlay {
+     opacity: 0.8; 
+    } 
+     
+/* Quando o mouse passa sobre o card, a imagem fica levemente borrada. */ 
+.char-container:hover .char-img { 
+    filter: blur(2px); 
+}
+
+.four-mainpart {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rolagem4 {
+    max-height: 288px; /* Altura exata para exibir uma imagem por vez (280px + padding) */
+    width: 208px;       
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    
+    /* Ativa o imã nativo do navegador para o usuário também */
+    scroll-snap-type: y mandatory;
+    /* Faz a mágica do deslize suave acontecer */
+    scroll-behavior: smooth; 
+}
+
+.rolagem4::-webkit-scrollbar {
+    display: none; 
+}
+
+.interior4 {
+    background-color: #000;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaçamento idêntico ao cálculo do script */
+}
+
+.interior4 img {
+    width: 200px;
+    height: 280px;
+    object-fit: cover; 
+    display: block;
+    
+    /* Alinha cada imagem perfeitamente no topo do container ao travar */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}

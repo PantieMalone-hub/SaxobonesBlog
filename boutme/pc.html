@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PC</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background: #000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* ================================
+           MONITOR
+        ================================= */
+
+        .pc-container {
+            position: relative;
+
+            width: 900px;
+            max-width: 190vw;
+
+            /* Mantém a proporção exata da imagem do monitor */
+            aspect-ratio: 523 / 500;
+        }
+
+
+        /* ================================
+           TELA PRETA / SITE
+        ================================= */
+
+        .screen {
+            position: absolute;
+
+            /* 
+                Coordenadas ajustadas para encaixar no visor escuro do monitor
+            */
+            top: 8.5%;
+            left: 0%;
+
+            width: 100%;
+            height: 70%;
+
+            overflow: hidden;
+
+            z-index: 1;
+
+            background: #000;
+            border-radius: 10px; /* Arredonda os cantos para acompanhar o tubo CRT */
+        }
+
+
+        /* ================================
+           SITE DENTRO DO MONITOR
+        ================================= */
+
+        .screen iframe {
+            display: block;
+
+            width: 100%;  /* Garante que o conteúdo acompanhe o tamanho da tela sem vazamentos */
+            height: 105%;
+
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* ================================
+           MOLDURA DO MONITOR
+        ================================= */
+
+        .pc-frame {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            z-index: 2;
+
+            /* Deixa os cliques do mouse passarem direto para o iframe */
+            pointer-events: none;
+        }
+
+        @media screen and (max-width: 1400px) {
+  body {
+    overflow-x: hidden; /* Evita barras de rolagem estranhas */
+  }
+
+  .wrapper {
+    transform: scale(0.75); /* Aplica o zoom de 67% */
+    transform-origin: top center; /* Garante que o site encolha a partir do topo */
+    width: 150%; /* Compensa a perda de largura gerada pela redução da escala (100 / 0.67 ≈ 150) */
+    margin-left: 200px;
+  }
+}
+    </style>
+</head>
+<div class="wrapper">
+<body>
+    
+    <div class="pc-container">
+
+        <!-- SITE INTERATIVO DENTRO DA TELA -->
+        <div class="screen">
+
+            <iframe
+                src="boutme.html"
+                title="Site dentro do monitor">
+            </iframe>
+
+        </div>
+
+
+        <!-- MOLDURA DO MONITOR -->
+        <img
+            src="pc.png"
+            class="pc-frame"
+            alt="Monitor">
+            
+    </div>
+
+</body>
+</div>
+</html>
